@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #088DA5, #00e5ff);
+            color: #fff;
+            padding: 20px;
+        }
+        header {
+            font-size: 2em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .happy-button {
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .happy-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        #login-container {
+            margin-top: 100px;
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="auth.js"></script>
+</head>
+<body onload="initializePage()">
+
+    <header>
+        <h1>Banana Web</h1>
+    </header>
+
+    <!-- Login Form -->
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="authenticate()">Login</button>
+    </div>
+
+    <!-- Game Buttons (Initially Hidden) -->
+    <main id="main-content" style="display: none;">
+      <!-- Logout Button (Appears when logged in) -->
+<button id="logout-button" style="display: none; margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: red; color: white; border: none; border-radius: 5px;" onclick="logout()">Logout</button>
+
+        <p>Click the buttons below to play some games!</p>
+        <div class="button-container">
+            <button class="happy-button" onclick="redirectTo('game1', 'Game1.html')">Rocket Bot Royale</button>
+            <button class="happy-button" onclick="redirectTo('game2', 'Game2.html')">Slow Roads</button>
+            <button class="happy-button" onclick="redirectTo('game3', 'Game3.html')">Snow Rider 3d</button>
+            <button class="happy-button" onclick="redirectTo('game4', 'Game4.html')">Krunker.io</button>
+            <button class="happy-button" onclick="redirectTo('game5', 'Game5.html')">1v1.lol</button>
+            <button class="happy-button" onclick="redirectTo('game6', 'Game6.html')">Slither.io</button>
+            <button class="happy-button" onclick="redirectTo('game7', 'Game7.html')">moomoo.io</button>
+            <button class="happy-button" onclick="redirectTo('game8', 'Game8.html')">fallapy</button>
+            <button class="happy-button" onclick="redirectTo('game9', 'Game9.html')">Starblast</button>
+            <button class="happy-button" onclick="redirectTo('game10', 'Game10.html')">Monkey Mart</button>
+            <button class="happy-button" onclick="redirectTo('game11', 'Game11.html')">Wings.io</button>
+            <button class="happy-button" onclick="redirectTo('game12', 'Game12.html')">Diep.io</button>
+            <button class="happy-button" onclick="redirectTo('game13', 'Game13.html')">Openfront Backup</button>
+            <button class="happy-button" onclick="redirectTo('game14', 'Game14.html')">UniUB</button>
+            <button class="happy-button" onclick="redirectTo('game15', 'Game15.html')">Shellshockers</button>
+        </div>
+    </main>
+
+</body>
+</html>
