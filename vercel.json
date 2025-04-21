@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/SSSV2index.html" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
