@@ -16,7 +16,7 @@ const users = {
 const specialCode = "specialredirect";
 
 // Generic link for normal users
-const genericLink = "https://openfront.io";
+const genericLink = "https://openfront.dev";
 
 // Authenticate user
 function authenticate() {
